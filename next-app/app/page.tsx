@@ -1,3 +1,5 @@
+import { Button } from "./components/ui/button"
+
 
 export default function ({
     children,
@@ -5,7 +7,8 @@ export default function ({
     children: React.ReactNode;
   }>) {
     return (
-      <div className="bg-red-200">Главная 12exxxxxx</div>
+      <div className="bg-red-200">Главная 12exxxxxx <Button variant="outline">Button</Button>
+      </div>
     )
   }
   

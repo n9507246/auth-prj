@@ -3,7 +3,7 @@
 docker network create my_network
 
 # Build dev
-docker compose -f docker-compose.dev.yml build
+docker compose -f docker-compose.yml build
 
 # Up dev
-docker compose -f docker-compose.dev.yml up
+docker compose -f docker-compose.yml up
