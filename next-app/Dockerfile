@@ -14,7 +14,7 @@ RUN \
 
 COPY app ./app
 COPY .eslintrc.json ./
-COPY next-env.d.ts ./
+#COPY next-env.d.ts ./
 COPY next.config.mjs ./
 COPY postcss.config.mjs ./
 COPY tailwind.config.ts ./
