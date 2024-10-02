@@ -32,4 +32,4 @@
 
 # typescript
 /next-app/*.tsbuildinfo
-/next-app/next-env.d.ts
+#/next-app/next-env.d.ts
