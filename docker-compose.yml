@@ -14,13 +14,11 @@ services:
     env_file:
       - .env
     volumes:
-      - ./next-app/app:/next-app/app
-      - ./next-app/.eslintrc.json:/next-app/.eslintrc.json
-      - ./next-app/next.config.mjs:/next-app/next.config.mjs
-      - ./next-app/next-env.d.ts:/next-app/next-env.d.ts
-      - ./next-app/postcss.config.mjs:/next-app/postcss.config.mjs
-      - ./next-app/tailwind.config.ts:/next-app/tailwind.config.ts
-      - ./next-app/tsconfig.json:/next-app/tsconfig.json
+      # копируем всю next-app но...
+      - ./next-app:/next-app:delegated
+      # исключем node_modules и .next из монтирования что бы не перезаписывать
+      - /next-app/node_modules  
+      - /next-app/.next 
     restart: always
     ports:
       - 4444:3000
